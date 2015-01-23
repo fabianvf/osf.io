@@ -24,11 +24,12 @@ class SearchTestCase(OsfTestCase):
 
     def setUp(self):
         super(SearchTestCase, self).setUp()
+        search.delete_all()
         search.create_index()
 
 
 def query(term):
-    results = search.search(build_query(term))
+    results = search.search(build_query(term), index='website', doc_type=['component', 'registration', 'project', 'user'])
     return results
 
 
@@ -204,6 +205,10 @@ class TestPublicNodes(SearchTestCase):
             is_public=True,
             is_registration=True
         )
+        self.user.save()
+        self.project.save()
+        self.component.save()
+        self.registration.save()
 
     def test_make_private(self):
         """Make project public, then private, and verify that it is not present

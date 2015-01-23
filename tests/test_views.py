@@ -3002,6 +3002,7 @@ class TestSearchViews(OsfTestCase):
         super(TestSearchViews, self).setUp()
         import website.search.search as search
         search.delete_all()
+        search.create_index()
 
         self.project = ProjectFactory(creator=UserFactory(fullname='Robbie Williams'))
         self.contrib = UserFactory(fullname='Brian May')
