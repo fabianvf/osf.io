@@ -116,10 +116,10 @@
         <h5>Source: <small>{{ source }}</small></h5>
         <!-- /ko -->
 
-        <!-- ko if: $data.isResource -->
-        <button class="btn btn-primary pull-right" data-bind="click: $parents[1].claim.bind($data, _id)">Curate This</button>
+        ## <!-- ko if: $data.isResource -->
+        ## <button class="btn btn-primary pull-right" data-bind="click: $parents[1].claim.bind($data, _id)">Curate This</button>
         <br>
-        <!-- /ko -->
+        ## <!-- /ko -->
     </script>
     <script type="text/html" id="user">
 
