@@ -106,7 +106,7 @@
         <!-- ko if: contributors.length > 0 -->
         <h5>
             Contributors: <small data-bind="foreach: contributors">
-                <span>{{ $data }}</span>
+                <span>{{ $data.given + ' ' + $data.family }}</span>
             <!-- ko if: ($index()+1) < ($parent.contributors.length) -->&nbsp;- <!-- /ko -->
             </small>
         </h5>
