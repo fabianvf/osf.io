@@ -359,3 +359,22 @@ invoke pack -w
 invoke server
 ```
 
+
+# OSF Applications with SHARE
+
+1. Create a new project
+2. Set project to app
+3. Get its app id
+4. Add this to settings:
+
+```python
+SHARE_APP_ID = ‘appid'
+
+INDICES.append('metadata')
+TYPES.append(SHARE_APP_ID)
+ALIASES[SHARE_APP_ID] = 'SHARE'
+```
+5. Generate an API key for your user profile
+6. Go to your scrapi repo
+7. Set APP_ID, API_KEY and API_KEY_LABEL in scrapi/settings/local.py
+8. Add 'osf' to the list of normalized processors
