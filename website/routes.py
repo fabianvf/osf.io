@@ -222,7 +222,6 @@ def make_url_map(app):
 
     process_rules(app, [
         Rule('/dashboard/get_nodes/', 'get', website_views.get_dashboard_nodes, json_renderer),
-<<<<<<< HEAD
         # TODO Fix apps
         # Rule('/dashboard/apps/', 'get', website_views.get_dashboard_apps, json_renderer),
         # API route for getting serialized HGrid data, e.g. for the project
@@ -231,8 +230,6 @@ def make_url_map(app):
         # can use the /dashboard/ URL. e.g.
         # /dashboard/<nid> -> Return info about dashboard nodes
         # /dashboard/grid/<nid>/ -> Return hgrid-serialized data for dashboard nodes
-=======
->>>>>>> develop
         Rule(
             [
                 '/dashboard/<nid>',
