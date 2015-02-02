@@ -38,6 +38,7 @@ from framework.mongo.utils import to_mongo, to_mongo_key
 from framework.analytics import (
     get_basic_counters, increment_user_activity_counters
 )
+from framework.sentry import log_exception
 
 from website import language
 from website import settings
@@ -1354,12 +1355,21 @@ class Node(GuidStoredObject, AddonModelMixin):
         return None
 
     def update_search(self):
+<<<<<<< HEAD
         import website.search.search as search
         if self.category == 'app':
             index = 'application'
         else:
             index = 'website'
         search.update_node(self, index=index)
+=======
+        from website import search
+        try:
+            search.search.update_node(self)
+        except search.exceptions.SearchUnavailableError as e:
+            logger.exception(e)
+            log_exception()
+>>>>>>> develop
 
     def remove_node(self, auth, date=None):
         """Marks a node as deleted.
@@ -1518,7 +1528,6 @@ class Node(GuidStoredObject, AddonModelMixin):
         :data: Form data
 
         """
-        # TODO: Throw error instead of returning?
         if not self.can_edit(auth):
             return
 
