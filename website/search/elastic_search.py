@@ -329,7 +329,7 @@ def create_index():
     for idx in INDICES:
         es.indices.create(idx, ignore=[400])
         for type_ in TYPES:
-            es.indices.put_mapping(index=idx, doc_type=type_, body=mapping, ignore=[400, 404]) #TODO
+            es.indices.put_mapping(index=idx, doc_type=type_, body=mapping, ignore=[400, 404])  # TODO
 
 
 @requires_search
