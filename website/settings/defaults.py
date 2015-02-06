@@ -6,8 +6,6 @@ These settings can be overridden in local.py.
 
 import os
 import json
-import hashlib
-
 
 
 os_env = os.environ
@@ -29,7 +27,6 @@ ROOT = os.path.join(BASE_PATH, '..')
 EMAIL_TOKEN_EXPIRATION = 24
 
 LOAD_BALANCER = False
-PROXY_ADDRS = []
 
 LOG_PATH = os.path.join(APP_PATH, 'logs')
 TEMPLATES_PATH = os.path.join(BASE_PATH, 'templates')
