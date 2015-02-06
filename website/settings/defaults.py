@@ -6,7 +6,6 @@ These settings can be overridden in local.py.
 
 import os
 import json
-
 import hashlib
 
 
