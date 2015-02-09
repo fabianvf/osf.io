@@ -215,7 +215,7 @@ ALL_MY_REGISTRATIONS_NAME = 'All my registrations'
 DISK_SAVING_MODE = False
 
 #SHARE
-SHARE_APP_ID = None
+SHARE_APP_ID = '6qajn'
 
 # Add Contributors (most in common)
 MAX_MOST_IN_COMMON_LENGTH = 15
@@ -240,6 +240,7 @@ TYPES = [
     'component',
     'registration',
     'user',
+    SHARE_APP_ID
 ]
 
 ALIASES = {
@@ -248,5 +249,6 @@ ALIASES = {
     'component': 'Components',
     'registration': 'Registrations',
     'user': 'Users',
+    SHARE_APP_ID: 'SHARE'
 }
 
