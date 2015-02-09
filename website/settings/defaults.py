@@ -9,7 +9,6 @@ import json
 import hashlib
 
 
-
 os_env = os.environ
 
 def parent_dir(path):
@@ -30,7 +29,6 @@ EMAIL_TOKEN_EXPIRATION = 24
 CITATION_STYLES_PATH = os.path.join(BASE_PATH, 'citations', 'styles')
 
 LOAD_BALANCER = False
-PROXY_ADDRS = []
 
 LOG_PATH = os.path.join(APP_PATH, 'logs')
 TEMPLATES_PATH = os.path.join(BASE_PATH, 'templates')
@@ -222,7 +220,7 @@ ALL_MY_REGISTRATIONS_NAME = 'All my registrations'
 DISK_SAVING_MODE = False
 
 #SHARE
-SHARE_APP_ID = '6qajn'
+SHARE_APP_ID = None
 
 # Add Contributors (most in common)
 MAX_MOST_IN_COMMON_LENGTH = 15
@@ -247,7 +245,6 @@ TYPES = [
     'component',
     'registration',
     'user',
-    SHARE_APP_ID
 ]
 
 ALIASES = {
@@ -256,6 +253,5 @@ ALIASES = {
     'component': 'Components',
     'registration': 'Registrations',
     'user': 'Users',
-    SHARE_APP_ID: 'SHARE'
 }
 

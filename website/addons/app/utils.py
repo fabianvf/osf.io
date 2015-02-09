@@ -95,7 +95,7 @@ def elastic_to_atom(name, data, query, url):
             link=doc['id']['url'] if doc.get('id') else doc['links'][0]['url'],
             author=format_contributors_for_atom(doc['contributors']),
             categories=format_categories(doc.get('tags')),
-            published=parse(doc.get('dateCreated'))
+            published=parse(doc.get('dateUpdated'))
         )
 
     return feed.to_string()
