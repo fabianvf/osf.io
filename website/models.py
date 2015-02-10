@@ -18,7 +18,7 @@ from website.conferences.model import Conference, MailRecord
 MODELS = (
     User, ApiKey, Node, NodeLog,
     Tag, WatchConfig, Session, Guid, MetaSchema, Pointer,
-    MailRecord, Comment, PrivateLink, MetaData, Conference,
+    MailRecord, Comment, PrivateLink, Conference,
     CitationStyle,
 )
 
